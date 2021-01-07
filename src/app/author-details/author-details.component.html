@@ -1,0 +1,48 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Edit author
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 500px; margin: auto;">
+        <div *ngIf="currentAuthor" class="edit-form">
+            <!-- <h4>Edit author</h4> -->
+            <form>
+                <input type="hidden" name="_id" [(ngModel)]="currentAuthor._id">
+                <div class="form-group">
+                    <label for="name">author Name</label>
+                    <input type="text" class="form-control" name="name" id="name" [(ngModel)]="currentAuthor.authorName">
+                </div>
+                <div class="form-group">
+                    <label for="code">Language</label>
+                    <input type="text" class="form-control" name="code" id="code" [(ngModel)]="currentAuthor.authorCode">
+                </div>
+                <!-- <div class="form-group">
+        <label for="description">author Description</label>
+        <input type="text" class="form-control" name="desc" id="desc" [(ngModel)]="currentAuthor.description">
+      </div> -->
+                <div class="form-group">
+                    <label for="price">Awards</label>
+                    <input type="text" class="form-control" name="price" id="price" [(ngModel)]="currentAuthor.price">
+                </div>
+
+
+                <button type="submit" class="btn btn-success" (click)="updateAuthorDetails()">Update</button>
+                <!-- <button class="btn btn-danger mr-2" (click)="deleteauthorData()">DELETE</button> -->
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,47 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Add Book
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 500px; margin: auto;">
+        <div *ngIf="currentProduct" class="edit-form">
+            <h4>Edit book</h4>
+            <form>
+                <input type="hidden" name="_id" [(ngModel)]="currentProduct._id">
+                <div class="form-group">
+                    <label for="name">Book Name</label>
+                    <input type="text" class="form-control" name="name" id="name" [(ngModel)]="currentProduct.productName">
+                </div>
+                <div class="form-group">
+                    <label for="code">Book author</label>
+                    <input type="text" class="form-control" name="code" id="code" [(ngModel)]="currentProduct.productCode">
+                </div>
+                <!-- <div class="form-group">
+        <label for="description">Book Description</label>
+        <input type="text" class="form-control" name="desc" id="desc" [(ngModel)]="currentProduct.description">
+      </div> -->
+                <div class="form-group">
+                    <label for="price">Rating</label>
+                    <input type="text" class="form-control" name="price" id="price" [(ngModel)]="currentProduct.price">
+                </div>
+
+                <button type="submit" class="btn btn-success" (click)="updateProductDetails()">Update</button>
+                <!-- <button class="btn btn-danger mr-2" (click)="deleteProductData()">DELETE</button> -->
+            </form>
+        </div>
+    </div>

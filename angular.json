@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "libb": {
+    "ProductApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/libb",
+            "outputPath": "dist/ProductApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -65,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "libb:build"
+            "browserTarget": "ProductApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "libb:build:production"
+              "browserTarget": "ProductApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "libb:build"
+            "browserTarget": "ProductApp:build"
           }
         },
         "test": {
@@ -113,16 +109,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "libb:serve"
+            "devServerTarget": "ProductApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "libb:serve:production"
+              "devServerTarget": "ProductApp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "libb"
+  "defaultProject": "ProductApp",
+  "cli": {
+    "analytics": "4ffcdc2c-4fc2-4289-baf5-0c6c082f9087"
+  }
 }

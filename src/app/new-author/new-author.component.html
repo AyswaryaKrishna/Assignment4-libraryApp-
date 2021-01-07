@@ -1,0 +1,73 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Add Author
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <form (ngSubmit)="AddAuthor()">
+            <div class="card-header">
+                Add author
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <!-- <tr>
+                <td> <label>author Id</label> </td>
+                <td>
+                  <input type="text" name="p_id" [(ngModel)]="author_Item.authorId">
+                </td>
+              </tr> -->
+                            <tr>
+                                <td> <label>author Name</label> </td>
+                                <td>
+                                    <input type="text" name="p_name" [(ngModel)]="author_Item.authorName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> <label>Language</label> </td>
+                                <td>
+                                    <input type="text" name="p_code" [(ngModel)]="author_Item.authorCode">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> <label>Awards</label> </td>
+                                <td>
+                                    <input type="text" name="p_date" [(ngModel)]="author_Item.releaseDate">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> <label>author ImageUrl</label> </td>
+                                <td>
+                                    <input type="text" name="p_image" [(ngModel)]="author_Item.imageUrl">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <!-- <button>Submit</button> -->
+                                    <input type="submit" value="Submit">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>

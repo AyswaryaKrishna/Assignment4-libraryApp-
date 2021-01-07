@@ -1,0 +1,85 @@
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h1>Add Book
+                    <p class="lead"></p>
+                </h1>
+            </div>
+            <div class="col-md-5">
+                <div class="well well-lg">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /cont -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-spacer"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- /cont -->
+
+</div>
+<div class="card">
+    <form (ngSubmit)="AddProduct()">
+        <div class="card-header">
+            <!-- <h1>Add book</h1> -->
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        <!-- <tr>
+              <td> <label>Book Id</label> </td>
+              <td>
+                <input type="text" name="p_id" [(ngModel)]="product_Item.productId">
+              </td>
+            </tr> -->
+                        <tr>
+                            <td> <label>Book Name</label> </td>
+                            <td>
+                                <input type="text" name="p_name" [(ngModel)]="product_Item.productName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label>Author</label> </td>
+                            <td>
+                                <input type="text" name="p_code" [(ngModel)]="product_Item.productCode">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <label>Rating</label> </td>
+                            <td>
+                                <input type="text" name="p_date" [(ngModel)]="product_Item.releaseDate">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td> <label>Book ImageUrl</label> </td>
+                            <td>
+                                <input type="text" name="p_image" [(ngModel)]="product_Item.imageUrl">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <!-- <button>Submit</button> -->
+                                <input type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
