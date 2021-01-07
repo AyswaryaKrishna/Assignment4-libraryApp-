@@ -18,6 +18,7 @@ var app = new express();
 const port = process.env.PORT || 3000;
 
 //Database connection
+//Database connection
 mongoose.connect(db_url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -32,6 +33,7 @@ mongoose.connect(db_url, {
 
 app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(bodyParser.json());
+
 
 app.get('/products', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
